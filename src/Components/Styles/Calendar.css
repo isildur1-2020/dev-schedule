@@ -1,0 +1,108 @@
+* {
+  font-family: "Bangers", cursive;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+
+  background: #87cefa;
+}
+/* VARIABLES COLORES */
+:root {
+  --color-bg-calendar: #008080;
+  --color-cell: #1f0808;
+  --color-font-calendar: white;
+
+  --color-cell-selected: white;
+  --color-bg-cell-disabled: #5f9ea0;
+}
+/* CONTENEDOR RAÍZ DEL CALENDARIO */
+.root {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+/* CONTENEDOR CALENDARIO */
+.calendar__container {
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0 20px;
+  padding: 20px 10px;
+  font-family: sans-serif;
+  background: var(--color-bg-calendar);
+
+  border-radius: 10px;
+}
+/* CABEZA CALENDARIO */
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+  color: var(--color-font-calendar);
+
+  text-transform: uppercase;
+}
+/* BOTONES DE PREVIO Y SIGUIENTE */
+.calendar__control {
+  padding: 0 5px;
+
+  background: transparent;
+  font-weight: bold;
+  color: var(--color-font-calendar);
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendar__control:hover {
+  border-bottom: 1px dashed white;
+  transition: 1s;
+}
+/* CONTENEDOR DÍAS DE LA SEMANA */
+.grid__header {
+  margin-bottom: 9px;
+  color: var(--color-font-calendar);
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1 auto;
+}
+/* CONTENEDOR DIAS DEL MES */
+.grid__body {
+  color: var(--color-cell);
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, minmax(30px, auto));
+}
+/* CONTENEDORES C/U */
+.grid__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* CONTENEDOR DÍAS C/U */
+.grid__cell--days {
+  cursor: pointer;
+}
+/* CLASE DE SELECCIÓN */
+.grid__cell_selected {
+  color: var(--color-bg-calendar);
+  background: var(--color-cell-selected);
+
+  border-radius: 5px;
+}
+/* CLASE DESHABILITADO */
+.grid__cell--disabled {
+  color: var(--color-bg-cell-disabled);
+  cursor: not-allowed;
+}

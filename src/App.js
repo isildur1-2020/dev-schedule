@@ -1,11 +1,13 @@
 import React from 'react';
-// import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import Calendar from './Components/Calendar'
 
 function App() {
   return (
-    <div className="App">
-      <h1>breve hay funciona</h1>
-    </div>
+    <BrowserRouter>
+      <Route path="/" component={Calendar} />
+    </BrowserRouter>
   );
 }
 
