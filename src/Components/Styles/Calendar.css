@@ -1,4 +1,6 @@
 * {
+  user-select: none;
+
   font-family: "Bangers", cursive;
 }
 body {
@@ -22,6 +24,7 @@ body {
   min-height: 100vh;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 /* CONTENEDOR CALENDARIO */
@@ -33,7 +36,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  margin: 0 20px;
   padding: 20px 10px;
   font-family: sans-serif;
   background: var(--color-bg-calendar);
@@ -67,22 +69,13 @@ body {
   border-bottom: 1px dashed white;
   transition: 1s;
 }
-/* CONTENEDOR DÍAS DE LA SEMANA */
-.grid__header {
-  margin-bottom: 9px;
-  color: var(--color-font-calendar);
-
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1 auto;
-}
 /* CONTENEDOR DIAS DEL MES */
 .grid__body {
   color: var(--color-cell);
 
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, minmax(30px, auto));
+  grid-template-rows: repeat(6, minmax(30px, auto));
 }
 /* CONTENEDORES C/U */
 .grid__cell {

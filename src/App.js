@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import Calendar from './Components/Calendar'
+import Main from './Components/Main'
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" component={Calendar} />
+      <Route path="/" component={Main} />
     </BrowserRouter>
   );
 }
