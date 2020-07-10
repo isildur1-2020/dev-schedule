@@ -1,0 +1,15 @@
+/* CONTENEDORES C/U */
+.grid__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* CONTENEDOR DÍAS DE LA SEMANA */
+.grid__header {
+  margin-bottom: 9px;
+  color: var(--color-font-calendar);
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1 auto;
+}
