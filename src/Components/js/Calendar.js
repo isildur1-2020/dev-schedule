@@ -21,6 +21,7 @@ export default class Calendar {
       cells.push({
         date: moment(dateStart),
         isInCurrentMonth: dateStart.month() === monthToShow.month(),
+        isSelect: false
       });
       dateStart.add(1, "day");
     } while (dateStart.isSameOrBefore(dateEnd));

@@ -1,0 +1,23 @@
+.tasks
+{
+    width: 50%;
+    min-height: 300px;
+
+    padding: 15px;
+    background: var(--color-bg-calendar);
+
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.task
+{
+    height: 50px;
+    margin: 5px;
+    border: 1px dashed white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 /* CONTENEDOR CALENDARIO */
@@ -42,60 +42,4 @@ body {
 
   border-radius: 10px;
 }
-/* CABEZA CALENDARIO */
-.calendar__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  margin-bottom: 30px;
-  color: var(--color-font-calendar);
-
-  text-transform: uppercase;
-}
-/* BOTONES DE PREVIO Y SIGUIENTE */
-.calendar__control {
-  padding: 0 5px;
-
-  background: transparent;
-  font-weight: bold;
-  color: var(--color-font-calendar);
-
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.calendar__control:hover {
-  border-bottom: 1px dashed white;
-  transition: 1s;
-}
-/* CONTENEDOR DIAS DEL MES */
-.grid__body {
-  color: var(--color-cell);
-
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, minmax(30px, auto));
-}
-/* CONTENEDORES C/U */
-.grid__cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* CONTENEDOR DÍAS C/U */
-.grid__cell--days {
-  cursor: pointer;
-}
-/* CLASE DE SELECCIÓN */
-.grid__cell_selected {
-  color: var(--color-bg-calendar);
-  background: var(--color-cell-selected);
-
-  border-radius: 5px;
-}
-/* CLASE DESHABILITADO */
-.grid__cell--disabled {
-  color: var(--color-bg-cell-disabled);
-  cursor: not-allowed;
-}

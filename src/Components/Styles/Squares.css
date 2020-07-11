@@ -1,0 +1,30 @@
+/* CONTENEDOR DIAS DEL MES */
+.grid__body {
+  color: var(--color-cell);
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, minmax(30px, auto));
+}
+/* CONTENEDORES C/U */
+.grid__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* CONTENEDOR DÍAS C/U */
+.grid__cell--days {
+  cursor: pointer;
+}
+/* CLASE DE SELECCIÓN */
+.grid__cell_selected {
+  color: var(--color-bg-calendar);
+  background: var(--color-cell-selected);
+
+  border-radius: 5px;
+}
+/* CLASE DESHABILITADO */
+.grid__cell--disabled {
+  color: var(--color-bg-cell-disabled);
+  cursor: not-allowed;
+}

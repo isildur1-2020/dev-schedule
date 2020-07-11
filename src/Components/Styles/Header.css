@@ -1,0 +1,27 @@
+/* CABEZA CALENDARIO */
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+  color: var(--color-font-calendar);
+
+  text-transform: uppercase;
+}
+/* BOTONES DE PREVIO Y SIGUIENTE */
+.calendar__control {
+  padding: 0 5px;
+
+  background: transparent;
+  font-weight: bold;
+  color: var(--color-font-calendar);
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendar__control:hover {
+  border-bottom: 1px dashed white;
+  transition: 1s;
+}
