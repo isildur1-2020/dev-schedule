@@ -1,0 +1,35 @@
+.form {
+  width: 50%;
+  min-height: 400px;
+
+  padding-bottom: 30px;
+  background: var(--color-bg-calendar);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.form input {
+  margin: 10px;
+  width: 85%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  outline: none;
+}
+.form button {
+  width: 70%;
+  height: 55px;
+
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+.form button:hover {
+  background: greenyellow;
+}

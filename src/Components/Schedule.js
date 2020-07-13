@@ -2,16 +2,15 @@
 import React, { Component } from "react";
 import moment from "moment";
 // ESTILOS
-import "./Styles/Calendar.css";
+import "./Styles/Schedule.css";
 // LÓGICA DEL CALENDARIO
 import Calendar from "./js/Calendar";
 // SUB - COMPONENTES
 import Header from "./Header";
 import Days from "./Days";
 import Squares from "./Squares";
-import Tasks from './Tasks'
 
-export default class Main extends Component {
+export default class Schedule extends Component {
   constructor(props) {
     super(props);
     this.moment = moment();
@@ -20,7 +19,6 @@ export default class Main extends Component {
     this.state = {
       moment: this.moment,
       showDays: this.schedule.generateDates(),
-      tasks: [],
     };
   }
   render() {
@@ -37,16 +35,20 @@ export default class Main extends Component {
               <Squares
                 dates={this.dates}
                 data={this.state.showDays}
-                handleClickCell={this.handleClickCell}
+                handleClick={this.handleClickCell}
               />
             </div>
           </div>
         </div>
-        <Tasks tasks={this.state.tasks}/>
       </div>
     );
   }
   changeMonth = (ev) => {
+    let nodos = this.dates.current.childNodes;
+    this.props.handleClick('')
+    for (let i = 0; i < nodos.length; i++) {
+      nodos[i].classList.remove("grid__cell_selected");
+    }
     if (ev.target.name === "previous") {
       this.setState({
         moment: this.state.moment.subtract(1, "month"),
@@ -60,11 +62,14 @@ export default class Main extends Component {
     }
   };
   handleClickCell = (ev) => {
+    if(ev.target.classList.contains('grid__cell--disabled')){
+      return
+    }
+    //Seleccionando el cuadro del estado y elevando el estado
     let numberCell = ev.target.getAttribute("cell");
     let date = this.state.showDays[numberCell].date.format("LL");
-    let clonar = this.state.tasks;
-    clonar.push(date);
-    this.setState({ tasks: clonar });
+    this.props.handleClick(date)
+    //lógica para colorear días
     let nodos = this.dates.current.childNodes;
     for (let i = 0; i < nodos.length; i++) {
       if (

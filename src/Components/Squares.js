@@ -11,7 +11,7 @@ const Squares = (props) => {
             key={index}
             cell={index}
             className="grid__cell grid__cell--days"
-            onClick={props.handleClickCell}
+            onClick={props.handleClick}
           >
             {day.date.date()}
           </span>
@@ -20,7 +20,7 @@ const Squares = (props) => {
             key={index}
             cell={index}
             className="grid__cell grid__cell--days grid__cell--disabled"
-            onClick={props.handleClickCell}
+            onClick={props.handleClick}
           >
             {day.date.date()}
           </span>
