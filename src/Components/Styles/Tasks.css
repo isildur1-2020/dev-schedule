@@ -22,19 +22,22 @@
   flex-direction: column;
 }
 .quit {
-    margin: 10px;
-    width: 25%;
+  margin: 10px;
+  width: 25%;
 
-    background: #FF69B4;
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 2px;
+  background: #ff69b4;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
 
-    border: none;
-    border-radius: 10px;
-    outline: none;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.quit:focus {
+  background: greenyellow;
 }
 .quit:hover {
-    background: #8B0000;
-    transition: .7s;
+  background: #8b0000;
+  transition: 0.7s;
 }

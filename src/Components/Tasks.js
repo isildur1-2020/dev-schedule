@@ -10,10 +10,10 @@ export default class Tasks extends Component {
                   <h1>YOUR TASKS !!!</h1>
                   {this.props.data.map((task, index) => (
                       <div key={index} className="task">
-                          <span>{index}</span>
+                          <span>Task n° {index+1}</span>
                           <span>Date: {task.date}</span>
                           <span>Category: {task.isJob ? 'Job :((': 'Holidays !!!'}</span>
-                          <span>Identify: {task.identify}</span>
+                          <span>Identication: {task.identify}</span>
                           <span>Task: {task.text}</span>
                           <button onClick={this.props.handleClick} className="quit" quit={index}>delete</button>
                       </div>
