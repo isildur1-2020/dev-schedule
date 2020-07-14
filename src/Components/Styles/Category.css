@@ -1,0 +1,30 @@
+.isJob {
+  margin: 10px;
+  width: 65%;
+  height: 50px;
+  background: #ffa500;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  outline: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notJob {
+  margin: 10px;
+  width: 65%;
+  height: 50px;
+  background: #7cfc00;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  outline: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

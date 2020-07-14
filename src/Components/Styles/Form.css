@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.form input {
+.form-input {
   margin: 10px;
   width: 85%;
   height: 50px;

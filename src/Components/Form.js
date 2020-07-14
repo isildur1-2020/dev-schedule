@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './Styles/Form.css'
 
+import Category from './Category'
+
 export default class Form extends Component {
     render() {
         return(
@@ -10,10 +12,10 @@ export default class Form extends Component {
                     Task´s Register<br />
                     {this.props.date || "choose a date"}
                 </h1>
-                <input onChange={this.props.handleChange} type="button" value="Estado varianza" />
-                <input onChange={this.props.handleChange} name="identify" type="text" placeholder="Número de cédula" />
-                <input onChange={this.props.handleChange} name="text" type="text" placeholder="Write your task" />
-                <button>Crear !</button>
+                <Category handleClick={this.props.handleClick} isJob={this.props.isJob} />
+                <input className="form-input" onChange={this.props.handleChange} name="identify" type="text" placeholder="identification" />
+                <input className="form-input" onChange={this.props.handleChange} name="text" type="text" placeholder="Write your task" />
+                <button onClick={this.props.handleClickSend}>Create !</button>
             </form>
         )
     }

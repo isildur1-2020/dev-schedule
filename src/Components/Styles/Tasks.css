@@ -1,27 +1,40 @@
-.tasks
-{
-    width: 100%;
-    min-height: 300px;
+.tasks {
+  width: 100%;
+  min-height: 300px;
 
-    padding: 15px;
-    background: var(--color-bg-calendar);
+  padding: 15px;
 
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.task{
-    width: 85%;
-    margin: 20px;
-    padding: 10px;
+.task {
+  width: 85%;
+  margin: 20px;
+  padding: 10px;
 
-    background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+.quit {
+    margin: 10px;
+    width: 25%;
+
+    background: #FF69B4;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+    border: none;
     border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
+    outline: none;
+}
+.quit:hover {
+    background: #8B0000;
+    transition: .7s;
 }
